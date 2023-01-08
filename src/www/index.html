@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebAssembly</title>
+  </head>
+  <body>
+    <script type="module">
+      import init, {greet} from "/wasm/hello_wasm.js";
+      init().then(() => greet("wasm"));
+    </script>
+  </body>
+</html>
