@@ -1,3 +1,6 @@
+mod components;
+use crate::components::sample;
+
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
@@ -7,5 +10,5 @@ extern {
 
 #[wasm_bindgen]
 pub fn greet(name: &str) {
-  alert(&format!("Hello, {}!", name));
+  alert(&sample::make_string(name));
 }
